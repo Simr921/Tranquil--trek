@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("/img/contactbg.jpg");
+ 
+  background-position: center center;
+  background-size: 100%;
+  
+}
+#container {
+  width: 60%;
+  margin: 80px auto 150px auto;
+  height: 100vh;
+}
+p {font-size: 12px;}
+h1 {font-size: 25px;}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* === CONTACTFORM === */
+.contactForm {
+  background-color: #fff;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.contactForm form {
+  width: 60%;
+  padding: 50px 30px 70px 30px;
+}
+.contactForm .name input,
+.contactForm .email input,
+.contactForm textarea {
+  width: 100%;
+  height: 25px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px 0 5px 10px;
+  color: #5a5a5a;
+}
+.contactForm .name input:focus,
+.contactForm .email input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border: 1px solid #097770;
+}
+.contactForm textarea {
+  height: 80px;
+  resize: none;
+}
+::placeholder {
+  color: #aaa;
+}
+.contactForm .service span {
+  margin-right: 20px;
+}
+.contactForm .service label {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.contactForm button {
+  float: right;
+  background-color: #b8956d;
+  padding: 10px 15px;
+  border: #b8956d;
+  color: #fff;
+  clear: both;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #b8956d 0 0 10px #b8956d;
+  margin-top: 20px;
+}
+.contactForm button:focus {
+  outline: none;
+}
+
+/* === MOREINFO === */
+.moreInfo {
+  background-color: #097770;
+  width: 230px;
+  color: #fff;
+  padding: 70px 40px;
+  border-radius: 10px;
+  position: absolute;
+  top: 100px;
+  right: -150px;
+  box-shadow: 0 0 0 #777777, 0 0 20px #777777;
+}
+.moreInfo h1 span {
+  font-size: 10px;
+  color: #b8956d;
+}
+.moreInfo p i {
+  margin-right: 10px;
+  color: #b8956d;
+}
+.moreInfo .city span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.moreInfo .cityText {
+  margin-left: 23px;
+}
+.moreInfo .socialIcons i {
+  color: #fff;
+  font-size: 15px;
+  margin: 20px 10px 0 0;
+}
+
+
+/* === MEDIA QUERIES 1000PX === */
+@media only screen and (max-width: 1000px) {
+  #container {width: 90%;}
+  .contactForm {width: 70%;}
+}
+
+/* === MEDIA QUERIES 700PX === */
+@media only screen and (max-width: 700px) {
+  .contactForm {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contactForm form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .moreInfo {
+    top: 550px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contactForm .service span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .contactForm .service span br {
+    display: none;
+  }
+  .contactForm .service label {
+    margin-left: 0;
+    font-size: 12px;
+  }
+}

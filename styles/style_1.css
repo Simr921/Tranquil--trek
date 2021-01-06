@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --border-bottom: 0px 0px 60px 60px;
+  --font-1: "Playball", cursive;
+  --font-2: "Texturina", serif;
+  --font-3: "Source Sans Pro", sans-serif;
+  --font-4: "Cookie", cursive;
+  --font-5: "Architects Daughter", cursive;
+
+  --hero-height: 99vh;
+}
+html {
+  /* scroll-behavior: smooth; */
+  color: #515151;
+  font-size: 10px;
+  background-color: #b7b6c7;
+  background-color: #d3d3da;
+}
+
+/* header start */
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* background-image: linear-gradient(to bottom,rgba(0,0,0,.5),transparent); */
+}
+.container {
+  width: 91%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+.nav {
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-toggle {
+  color: #fff;
+  font-size: 2.2rem;
+
+  cursor: pointer;
+  z-index: 1500;
+}
+.fas.fa-times {
+  display: none;
+}
+.nav-list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: rgb(23, 28, 32);
+  padding: 4.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1250;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+.nav::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s;
+}
+.nav-item {
+  text-align: center;
+  font-size: 1.9rem;
+  font-family: var(--font-5);
+}
+.nav-item a {
+  color: rgb(119, 106, 81);
+  text-decoration: none;
+}
+
+.open .fa-times {
+  display: block;
+}
+.open .fa-bars {
+  display: none;
+}
+.open .nav-list {
+  transform: translateX(0);
+}
+.open .nav::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/* landing page */
+.hero {
+  width: 100%;
+  height: var(--hero-height);
+  background: url("/img/proback.jpg") no-repeat;
+  border-radius: var(--border-bottom);
+  /* background-blend-mode: overlay; */
+  background-attachment: fixed;
+  background-size: 100%;
+}
+.overlay {
+  position: absolute;
+  height: var(--hero-height);
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(2, 2, 2, 0.644);
+  color: rgb(221 220 240 / 82%);
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: var(--border-bottom);
+  /* background-attachment: fixed; */
+}
+
+.hero .overlay h1:nth-child(1) {
+  font-size: 6rem;
+  font-family: var(--font-1);
+  letter-spacing: 0.2em;
+}
+.hero .overlay h1 span {
+  font-size: 9rem;
+}
+
+.hero .overlay h1 {
+  font-size: 2.5rem;
+  font-family: var(--font-5);
+}
+
+/* overlay-buttons */
+.overlay-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-buttons button {
+  margin: 1rem;
+  border-radius: 16%;
+  padding: 0.6rem;
+  border: none;
+  background: linear-gradient(0deg, #c1c0c000, #8e8e8e);
+  width: 10rem;
+  font-family: "Baloo Bhai 2", cursive;
+  font-weight: bold;
+  font-size: 1.4rem;
+  box-shadow: inset 7px -5px 3px #33263b;
+  cursor: pointer;
+}
+
+/* side bar */
+.social-icons {
+  width: 5%;
+  height: var(--hero-height);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: linear-gradient(to right, black, #716b6b59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0px 0px 0px 60px;
+}
+.social-icons .fab {
+  cursor: pointer;
+
+  font-size: 1.2rem;
+}
+.i1 .fa-facebook-f {
+  color: rgb(85, 85, 134);
+}
+.i1 .fa-instagram {
+  color: rgb(146, 46, 80);
+}
+.i1 .fa-twitter {
+  color: rgb(190 190 255);
+}
+.social-icons .i1 {
+  border: 1px solid #636363;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: black;
+}
+
+/* media queries */
+@media screen and (max-width: 900px) {
+  .social-icons {
+    display: none;
+  }
+  .hero .overlay h1:nth-child(1) {
+    font-size: 3rem;
+  }
+  .hero .overlay h1 span {
+    font-size: 4.5rem;
+  }
+  .hero .overlay h1 {
+    font-size: 1.4rem;
+  }
+  .nav-list {
+    width: 100%;
+  }
+  .hero {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero {
+    background: url("/img/proback.jpg") center center/cover no-repeat;
+    background-attachment: fixed;
+  }
+}
